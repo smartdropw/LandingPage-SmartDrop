@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartDrop | Monitoreo Inteligente de Agua</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts - versión sin CORS issues -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Iconify - versión CDN con bundle inline -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="navbar-content">
+        <div class="logo">
+            <div class="logo-icon">D</div>
+            <span class="logo-text">SmartDrop</span>
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#product">Producto</a></li>
+            <li><a href="#about">Nosotros</a></li>
+            <li><a href="#team">Equipo</a></li>
+            <li><a href="#solutions">Soluciones</a></li>
+            <li><a href="#liquids">Líquidos</a></li>
+            <li><a href="#features">Características</a></li>
+            <li><a href="#testimonial">Testimonios</a></li>
+            <li><a href="#pricing">Precios</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+
+        <button class="btn btn-outline nav-btn" id="contactBtn">Contactar Ventas</button>
+        <div class="language-dropdown" id="langDropdown">
+            <span id="langText">ES</span>
+            <span>▼</span>
+        </div>
+    </div>
+</nav>
+
+<header class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1>Smart water monitoring<br>for homes and businesses</h1>
+            <p>Track volume, pressure and temperature in real time with clear alerts and reports.</p>
+            <div class="hero-buttons">
+                <a href="Login.html" class="btn btn-primary">Get Started</a>
+                <button class="btn btn-secondary">Learn More</button>
+            </div>
+            <div class="tags">
+                <span class="tag tag-green">Real-Time Monitoring</span>
+                <span class="tag tag-gray">Water alerts</span>
+                <span class="tag tag-gray">Cloud dashboard</span>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="dashboard-mockup">
+                <div class="graph-area" style="position: relative; height:150px; width:100%">
+                    <canvas id="myChart"></canvas>
+                </div>
+                <div class="data-grid">
+                    <div class="data-item">
+                        <span class="data-label">Volume</span>
+                        <span class="data-value">1,250 L</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Pressure</span>
+                        <span class="data-value">2.4 bar</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Temperature</span>
+                        <span class="data-value">21.5 ºC</span>
+                    </div>
+                    <div class="data-item">
+                        <span class="data-label">Density</span>
+                        <span class="data-value">0.99 g/cm³</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="visibility section">
+    <div class="container">
+        <h2>Full visibility of your liquids</h2>
+        <p class="section-subtitle">Monitor liquid levels and pipelines, receiving instant pressure and temperature info via clear dashboards and prompt notifications.</p>
+        <div class="cards-grid">
+            <div class="card card-white">
+                <div class="card-icon"><iconify-icon icon="mdi:water-opacity" width="32"></iconify-icon></div>
+                <h3>Volume Management</h3>
+                <p>Set end tracks and obtain consumption and demand active records.</p>
+            </div>
+            <div class="card card-white highlighted-card">
+                <div class="card-icon"><iconify-icon icon="mdi:gauge" width="32"></iconify-icon></div>
+                <h3>Pressure Tracking</h3>
+                <p>Detect pressure variations to prevent line damage.</p>
+            </div>
+            <div class="card card-white highlighted-card">
+                <div class="card-icon"><iconify-icon icon="mdi:thermometer" width="32"></iconify-icon></div>
+                <h3>Temperature Control</h3>
+                <p>Ensure critical thresholds with smart alerts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about section" id="about">
+    <div class="container">
+        <h2>About Us</h2>
+        <p class="section-subtitle">A simple description. A dynamic tech-focused team bringing a solution tailored for efficient, reliable water resource control.</p>
+        <div class="cards-grid">
+            <div class="card card-white highlighted-card">
+                <h3>Mission</h3>
+                <p>Make liquid management accessible and efficient.</p>
+            </div>
+            <div class="card card-white highlighted-card">
+                <h3>Reliability</h3>
+                <p>Trusted sensors and infrastructure with 99.9% uptime.</p>
+            </div>
+            <div class="card card-white highlighted-card">
+                <h3>Customer focus</h3>
+                <p>Premium support, global onboarding, and continuous improvements.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team section" id="team">
+    <div class="container">
+        <h2>Our Team</h2>
+        <p class="section-subtitle">Five pillars powering SmartDrop</p>
+        <div class="team-grid">
+            <div class="employee-card">
+                <div class="employee-photo"><img src="assets/Angel.jpg" alt="Angel Jose Pariona Chacca"></div>
+                <p class="employee-name">Angel Jose Pariona Chacca</p>
+                <p class="employee-role">Ingeniero de Software</p>
+            </div>
+            <div class="employee-card">
+                <div class="placeholder-photo">B</div>
+                <p class="employee-name"></p>
+                <p class="employee-role">Ingeniero de Software</p>
+            </div>
+            <div class="employee-card">
+                <div class="placeholder-photo">C</div>
+                <p class="employee-name"></p>
+                <p class="employee-role">Ingeniero de Software</p>
+            </div>
+            <div class="employee-card">
+                <div class="placeholder-photo">L</div>
+                <p class="employee-name"></p>
+                <p class="employee-role">Ingeniero de Software</p>
+            </div>
+            <div class="employee-card">
+                <div class="placeholder-photo">S</div>
+                <p class="employee-name"></p>
+                <p class="employee-role">Ingeniero de Software</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="solutions section" id="solutions">
+    <div class="container">
+        <h2>Solutions by segments</h2>
+        <div class="cards-grid">
+            <div class="card card-white solution-card">
+                <div class="card-icon"><iconify-icon icon="mdi:home" width="32"></iconify-icon></div>
+                <h3>Residences</h3>
+                <p>Monitor liquid tanks, receive turn-by-turn costs, and detailed usage.</p>
+            </div>
+            <div class="card card-white solution-card">
+                <div class="card-icon"><iconify-icon icon="mdi:building" width="32"></iconify-icon></div>
+                <h3>Businesses</h3>
+                <p>Control liquid resources via custom monitoring to maximize production.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="liquids section" id="liquids">
+    <div class="container">
+        <h2>Supported liquids</h2>
+        <div class="liquids-grid">
+            <div class="card card-white liquid-card">
+                <h3>Gasoline</h3>
+                <p>Leasing, temperature and safety thresholds for tanks.</p>
+            </div>
+            <div class="card card-white liquid-card">
+                <h3>Beer</h3>
+                <p>Fermentation, temperature and density control.</p>
+            </div>
+            <div class="card card-white liquid-card">
+                <h3>Honey</h3>
+                <p>Premium measurements and consistency logs.</p>
+            </div>
+            <div class="card card-white liquid-card">
+                <h3>Molasses</h3>
+                <p>High viscosity tracking and user-friendly dashboards.</p>
+            </div>
+            <div class="card card-white liquid-card">
+                <h3>Chemicals</h3>
+                <p>Compliance, dosage conditions, and safety alerts.</p>
+            </div>
+            <div class="card card-white liquid-card">
+                <h3>Others</h3>
+                <p>And more liquid resource solutions.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="key-features section" id="features">
+    <div class="container">
+        <h2>Key features</h2>
+        <div class="cards-grid">
+            <div class="card card-white feature-card">
+                <h3>Pressure Tracking</h3>
+                <p>Sensor-less safe thresholds area notifications.</p>
+            </div>
+            <div class="card card-white feature-card">
+                <h3>Temperature Control</h3>
+                <p>Get data logs and safe alert levels for sanity.</p>
+            </div>
+            <div class="card card-white feature-card">
+                <h3>Volume Management</h3>
+                <p>Consumption active logs and predictive reports and insights.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonial section" id="testimonial">
+    <div class="container">
+        <h2>What our customers say</h2>
+        <p class="section-subtitle">Real stories from real users using SmartDrop.</p>
+        <div class="cards-grid">
+            <div class="card card-white testimonial-card">
+                <div class="customer-info flex">
+                    <div class="placeholder-photo customer-photo">[ Foto ]</div>
+                    <div>
+                        <p class="customer-name">Laura G.</p>
+                        <p class="customer-title">Home Owner</p>
+                    </div>
+                </div>
+                <div class="rating flex">
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                </div>
+                <p class="quote">"I'm using this for my main tank, I love how easy it is to track usage! My monthly bill is now consistent and safe."</p>
+            </div>
+            <div class="card card-white highlighted-card testimonial-card">
+                <div class="customer-info flex">
+                    <div class="placeholder-photo customer-photo">[ Foto ]</div>
+                    <div>
+                        <p class="customer-name">Daniel R.</p>
+                        <p class="customer-title">Brewery Manager</p>
+                    </div>
+                </div>
+                <div class="rating flex">
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                </div>
+                <p class="quote">"Our fermentation tanks are monitored 24/7. This has reduced errors by over 25% for our key batch and lowered cost per liter."</p>
+            </div>
+            <div class="card card-white highlighted-card testimonial-card">
+                <div class="customer-info flex">
+                    <div class="placeholder-photo customer-photo">[ Foto ]</div>
+                    <div>
+                        <p class="customer-name">Maria E.</p>
+                        <p class="customer-title">Logistics Manager</p>
+                    </div>
+                </div>
+                <div class="rating flex">
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star" width="20"></iconify-icon>
+                    <iconify-icon icon="mdi:star-outline" width="20"></iconify-icon>
+                </div>
+                <p class="quote">"Using this for fuel management reduced our missing logs significantly, saving tons of fuel."</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pricing section" id="pricing">
+    <div class="container">
+        <h2>Subscription plans</h2>
+        <div class="cards-grid">
+            <div class="card card-white pricing-card">
+                <h3>Basis</h3>
+                <p class="price">$19<span>/mo</span></p>
+                <ul class="features-list">
+                    <li>1 Tank</li>
+                    <li>Update every 15 min</li>
+                    <li>Basic alerts</li>
+                    <li>Email support</li>
+                </ul>
+                <button class="btn btn-outline card-btn">Contact us</button>
+            </div>
+            <div class="card card-white pricing-card pro-card">
+                <h3>Pro</h3>
+                <p class="price">$49<span>/mo</span></p>
+                <ul class="features-list">
+                    <li>Up to 5 Tanks</li>
+                    <li>Update every 5 min</li>
+                    <li>Advanced alerts</li>
+                    <li>Shared dashboards</li>
+                    <li>Priority support</li>
+                </ul>
+                <button class="btn btn-primary card-btn">Contact us</button>
+            </div>
+            <div class="card card-white pricing-card">
+                <h3>Enterprise</h3>
+                <p class="price">Custom</p>
+                <ul class="features-list">
+                    <li>Unlimited Tanks and users</li>
+                    <li>Real-time updates and API</li>
+                    <li>Expert consultation</li>
+                    <li>SLA guarantees</li>
+                    <li>24/7 support</li>
+                </ul>
+                <button class="btn btn-outline card-btn">Contact us</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq section" id="faq">
+    <div class="container">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-accordion">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I install the sensors myself?</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, all sensor installations are designed to be quick and easy. Detailed guides are provided, and most setups can be done without specialized skills.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is my data secure in the cloud?</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely. Your data security is our top priority. We use industry-standard encryption protocols for data transmission and storage.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How do the alerts work?</span>
+                    <span>▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Alerts are customizable based on volume, pressure, or temperature thresholds you define. Notifications can be sent via email, SMS, or within the dashboard.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact section">
+    <div class="container">
+        <h2>Contact Sales</h2>
+        <div class="flex-column form-container flex">
+            <form class="contact-form">
+                <div class="form-group flex">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Ingrese su nombre completo">
+                </div>
+                <div class="form-group flex">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico">
+                </div>
+                <div class="form-group flex">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Escriba su mensaje aquí..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary form-btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo logo">
+                <div class="logo-icon">D</div>
+                <span class="logo-text">SmartDrop</span>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Services</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Affiliate Institutions</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Progress</a></li>
+                        <li><a href="#">Adbase</a></li>
+                        <li><a href="#">Payment Options</a></li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Forum</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-social link-column">
+                <h4>Follow Us</h4>
+                <div class="social-icons flex">
+                    <div class="placeholder-icon">[ F ]</div>
+                    <div class="placeholder-icon">[ T ]</div>
+                    <div class="placeholder-icon">[ I ]</div>
+                    <div class="placeholder-icon">[ L ]</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SmartDrop. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="translations.js"></script>
+</body>
+</html>
