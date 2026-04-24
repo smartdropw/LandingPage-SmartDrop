@@ -1,6 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     /* ==========================================
+       0. MENÚ HAMBURGUESA (RESPONSIVE)
+       ========================================== */
+    const hamburgerBtn = document.getElementById('hamburgerBtn');
+    const navLinks = document.getElementById('navLinks');
+    const navItems = document.querySelectorAll('.nav-links a');
+
+    // Toggle menú al hacer clic en el hamburguesa
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // Cerrar menú al hacer clic en un enlace de navegación
+    navItems.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+
+    // Cerrar menú si hacemos clic fuera de él
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar')) {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+
+    /* ==========================================
        1. ACORDEÓN DE PREGUNTAS FRECUENTES (FAQ)
        ========================================== */
     const faqItems = document.querySelectorAll('.faq-item');

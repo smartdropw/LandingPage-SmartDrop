@@ -53,9 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
             setTimeout(() => {
                 alert(`¡Éxito!\nIniciando sesión en el dashboard de Droplet para: ${email}`);
 
-                // Aquí en un proyecto real harías la redirección:
-                // window.location.href = 'index.html';
-
                 // Restauramos el botón a su estado original
                 submitBtn.textContent = originalText;
                 submitBtn.style.opacity = '1';
@@ -68,6 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 passwordInput.setAttribute('type', 'password');
                 togglePassword.setAttribute('icon', 'mdi:eye');
                 togglePassword.style.opacity = '1';
+
+                // Redirigir a la landing page general
+                window.location.href = 'index.html';
 
             }, 1500);
         });
