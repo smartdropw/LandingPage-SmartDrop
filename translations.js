@@ -4,6 +4,7 @@ const translations = {
         navLinks: {
             producto: "Producto",
             nosotros: "Nosotros",
+            tecnologia: "Tecnología",
             equipo: "Equipo",
             soluciones: "Soluciones",
             liquidos: "Líquidos",
@@ -91,6 +92,7 @@ const translations = {
         navLinks: {
             producto: "Product",
             nosotros: "About",
+            tecnologia: "Technology",
             equipo: "Team",
             soluciones: "Solutions",
             liquidos: "Liquids",
@@ -205,13 +207,14 @@ function updatePageLanguage() {
     if (navItems.length > 0) {
         navItems[0].textContent = t.navLinks.producto;
         navItems[1].textContent = t.navLinks.nosotros;
-        navItems[2].textContent = t.navLinks.equipo;
-        navItems[3].textContent = t.navLinks.soluciones;
-        navItems[4].textContent = t.navLinks.liquidos;
-        navItems[5].textContent = t.navLinks.caracteristicas;
-        navItems[6].textContent = t.navLinks.testimonios;
-        navItems[7].textContent = t.navLinks.precios;
-        navItems[8].textContent = t.navLinks.faq;
+        navItems[2].textContent = t.navLinks.tecnologia;
+        navItems[3].textContent = t.navLinks.equipo;
+        navItems[4].textContent = t.navLinks.soluciones;
+        navItems[5].textContent = t.navLinks.liquidos;
+        navItems[6].textContent = t.navLinks.caracteristicas;
+        navItems[7].textContent = t.navLinks.testimonios;
+        navItems[8].textContent = t.navLinks.precios;
+        navItems[9].textContent = t.navLinks.faq;
     }
 
     // Actualizar botón contactar ventas

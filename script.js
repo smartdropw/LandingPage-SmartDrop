@@ -64,9 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ==========================================
        2. SCROLL SUAVE PARA EL MENÚ DE NAVEGACIÓN
        ========================================== */
-    const navLinks = document.querySelectorAll('.nav-links a');
+    const navLinkItems = document.querySelectorAll('.nav-links a');
 
-    navLinks.forEach(link => {
+    navLinkItems.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault(); // Evitamos el salto brusco normal
 
