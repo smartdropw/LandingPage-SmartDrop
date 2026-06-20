@@ -94,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Si el botón no es de tipo submit (del formulario de contacto)
             if(btn.type !== 'submit') {
                 e.preventDefault();
-                // Redirigir al login
-                window.location.href = 'login.html';
+                // Redirigir al login en Netlify
+                window.location.href = 'https://6a0693fc92c4560008b0ec59--smartdrop01.netlify.app/login';
             }
         });
     });
