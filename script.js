@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if(btn.type !== 'submit') {
                 e.preventDefault();
                 // Redirigir al login en Netlify
-                window.location.href = 'https://6a0693fc92c4560008b0ec59--smartdrop01.netlify.app/login';
+                window.location.href = 'https://smartdrop01.netlify.app/login';
             }
         });
     });
